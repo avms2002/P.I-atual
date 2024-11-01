@@ -87,45 +87,59 @@ iframe {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: adiciona sombra */
         }
 
+.namesmalinha {
+    font-size: 1.5rem; /* ou outro tamanho que você preferir */
+    color: #333; /* ou outra cor que você deseja */
+    text-align: center; /* centraliza o texto */
+    /* adicione mais estilos conforme necessário */
+}
+.carousel-inner {
+    text-align: center; /* Centraliza todos os textos dentro do carrossel */
+}
+
 
 
       </style>
 </head>
+<body class="bg-[url('img/azul.gif')] bg-cover bg-center h-screen">
+  
+
 <div class="welcome-section relative flex items-center justify-center text-white">
   <img src="img/fundo1.jpg" alt="Fundo de cybersegurança" class="absolute inset-0 w-full h-full object-cover">
-  <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+  <div class="overlay absolute inset-0 bg-black opacity-80"></div>
   <div class="welcome-content relative text-center p-8">
-      <h1 class="text-5xl font-bold mb-4">Bem-vindo ao Futuro da Segurança Cibernética!</h1>
-      <p class="text-xl mb-6">Estamos aqui para te informar sobre a segurança digital. Explore nosso site e descubra como podemos ajudar a manter sua segurança digital intacta.</p>
+     
+      <h1 class="text-6xl font-bold mb-8"> Bem vindo ao Futuro da Segurança Cibernética!</h1>
+      <br>   <p class="text-4xl mb-6">Estamos aqui para te informar sobre a segurança digital. Explore nosso site e descubra como podemos ajudar a manter sua segurança digital intacta.</p>
      
   </div>
 </div>
 
 
 <!-- Seção de Recursos -->
-<section id="features" class="py-16 bg-gray-800">
-  <div class="container mx-auto text-center">
+<section id="features" class="py-16 bg-gray-800 h-1/2"><br><br>
+  <div class="container mx-auto text-center transform hover:scale-105 transition duration-300">
       <h2 class="text-3xl font-bold text-white mb-8">Aqui voce encontra</h2>
       <div class="flex flex-wrap justify-center gap-8">
-          <div class="bg-gray-700 p-6 rounded-lg shadow-lg max-w-xs">
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg max-w-xs transform hover:scale-105 transition duration-300">
               <h3 class="text-xl font-semibold mb-2 text-white">NOTICIAS</h3>
               <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eveniet molestiae voluptate modi quas neque dolorem fugit? Voluptates in, cupiditate fugit officiis adipisci modi porro dignissimos provident accusamus dicta exercitationem.</p>
           </div>
-          <div class="bg-gray-700 p-6 rounded-lg shadow-lg max-w-xs">
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg max-w-xs transform hover:scale-105 transition duration-300">
               <h3 class="text-xl font-semibold mb-2 text-white">TUTORIAIS</h3>
               <p class="text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At ea beatae hic velit nisi dolor cupiditate deleniti! Unde at totam expedita, dicta sunt quibusdam tempora eveniet reiciendis? Eveniet, totam at.</p>
           </div>
-          <div class="bg-gray-700 p-6 rounded-lg shadow-lg max-w-xs">
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg max-w-xs transform hover:scale-105 transition duration-300">
               <h3 class="text-xl font-semibold mb-2 text-white">iNTERAÇÃO</h3>
               <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iusto cumque a voluptas, impedit minima dignissimos necessitatibus debitis temporibus nulla doloremque velit nesciunt vero eaque, enim dolorum blanditiis sapiente distinctio!</p>
           </div>
       </div>
-  </div>
+  </div><br><br>
 </section>
 
 <!--  -->
 
-<body class="bg-blue-900 to bg-gray-500">
+
   <div id="header-placeholder">
    
   </div>
@@ -134,7 +148,7 @@ iframe {
    document.addEventListener("DOMContentLoaded", () => {
     const headerPlaceholder = document.getElementById("header-placeholder");
 
-    fetch("header.html")
+    fetch("teste.html")
         .then(response => {
             if (!response.ok) throw new Error("Erro ao carregar o header.");
             console.log("Header carregado com sucesso."); // Diagnóstico
@@ -155,7 +169,7 @@ iframe {
 });
 
   </script>
-    <div class="max-w-4xl mx-auto bg-white shadow-lg">
+    <!-- <div class="max-w-4xl mx-auto bg-white shadow-lg">
       <header class="flex justify-between items-center p-4 border-b">
         
         <div class="flex items-center space-x-4">
@@ -164,17 +178,20 @@ iframe {
             <i class="fas fa-search"> </i>
           </div>
         </div>
-      </header> <br><br><br>
+      </header> <br><br><br> -->
     
       
       
-      <main class="p-4">
+      <main class="p-4 itens cente text-center ">
         
-        <h2 class="text-3xl font-bold mb-4 text-black font-extrabold">Postagens mais Recentes</h2>
+       
+        
+       <br><br> <h2 class="text-6xl  mb-4 text-white font-extrabold">Postagens mais Recentes</h2><br>
         <h1 id="carousel-title" class="text-3xl font-bold mb-4">
         
         </h1>
-        <div class="carousel">
+        <div class="carousel  w-1/2 mx-auto tex-center">
+         
           <div class="carousel-inner">
             <div class="carousel-item">
               <img
@@ -248,7 +265,7 @@ iframe {
 
         const titleElement = document.getElementById("carousel-title");
     const currentTitle = titles[currentIndex];
-    titleElement.innerHTML = `<a href="${currentTitle.url}" class="text-blue-500 hover:underline">${currentTitle.text}</a>`;
+    titleElement.innerHTML = `<a href="${currentTitle.url}" class="text-white hover:underline">${currentTitle.text}</a>`;
   }
 
       function nextSlide() {
@@ -259,90 +276,92 @@ iframe {
         showSlide(currentIndex - 1);
       }
     </script>
-    <section class="p-4 " class="bg-gray-100 p-8 mt-8">
-      <h2 class="text-2xl font-bold mb-4 text-black">Notícias em Destaque</h2>
-      <div class="grid grid-cols-3 gap-4">
-        <div class="bg-white shadow-lg p-4">
-          <img src="img/noticia1.jpg" alt="Notícia 1" class="w-full h-40 object-cover mb-2">
-          <a href="Links da pagina inicial/D1.html" class="text-xl font-bold mb-2">Brasil é o 4º país da América Latina com mais ameaças digitais no 1º semestre de 2024, diz pesquisa</a>
-
-          <p class="text-sm text-gray-600">Lideram ranking países como Peru, com 909 mil ameaças (35%), Mexico com 351 mil (13%) e Equador, com 204 mil ocorrências (7,84%)</p>
-        <br>  <a href="Links da pagina inicial/D1.html" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Leia mais</a>
-
-        </div>
-        <div class="bg-white shadow-lg p-4">
-          <img src="img/noticia2.jpg" alt="Notícia 2" class="w-full h-40 object-cover mb-2">
-          <h3 class="text-xl font-bold mb-2">Cyber ataques com ransomware visam empresas estrangeiras.</h3>
-          <p class="text-sm text-gray-600">Um grupo de cibercriminosos, conhecido como Crypt Ghouls, foi identificado como responsável por uma série de ataques direcionados a empresas… C</p>
-         <br><br> <a href="Links da pagina inicial/D2.html" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Leia mais</a>
-
-        </div>
-        <div class="bg-white shadow-lg p-4">
-          <img src="img/noticia3.jpg" alt="Notícia 3" class="w-full h-40 object-cover mb-2">
-          <h3 class="text-xl font-bold mb-2">Promotores dos EUA acusam dois irmãos por recorde de 35.000 ataques DDoS</h3>
-          <p class="text-sm text-gray-600">Promotores federais nos EUA acusaram dois irmãos sudaneses de operar uma botnet de negação de serviço distribuída (DDoS) de aluguel,…</p>
-       <br>   <a href="Links da pagina inicial/D3.html" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Leia mais</a>
-
-        </div>
+    <section class="p-5 mt-8"><br><br><br><br>
+      <h2 class="text-4xl font-bold mb-8 text-white">Notícias em Destaque</h2>
+     <br><br><br> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-transparent border border-gray-400 rounded-lg shadow-lg overflow-hidden w-[px] h-[600px] transition-transform transform hover:scale-105 mt-20 mx-auto p-4">
+        <img src="img/noticia1.jpg" alt="Notícia 1" class="w-full h-48 object-cover mb-4">
+        <a href="Links da pagina inicial/D1.html" class="text-4xl font-bold mb-2 text-white ">Brasil é o 4º país da América Latina com mais ameaças digitais no 1º semestre de 2024, diz pesquisa</a>
+        <p class="text-3xl text-white mb-4">Lideram ranking países como Peru, com 909 mil ameaças (35%), México com 351 mil (13%) e Equador, com 204 mil ocorrências (7,84%)</p>
+   <br> <a href="Links da pagina inicial/D1.html" class="mt-4 bg-blue-500 text-white w-full text-center px-4 py-2 rounded block">Leia mais</a>
       </div>
-      </section>
+      
+      
+        <div class="bg-transparent border border-gray-400 rounded-lg shadow-lg overflow-hidden w-[px] h-[600px] transition-transform 
+        transform hover:scale-105 mt-20 mx-auto p-4">
+          <img src="img/noticia2.jpg" alt="Notícia 2" class="w-full h-48 object-cover mb-4">
+          <h3 class="text-4xl font-bold mb-2 text-white ">Cyber ataques com ransomware visam empresas estrangeiras.</h3>
+        <br>  <p class="text-3xl text-white mb-4">Um grupo de cibercriminosos, conhecido como Crypt Ghouls, foi identificado como responsável por uma série de ataques direcionados a empresas…</p>
+       <br><br>  <a href="Links da pagina inicial/D2.html" class="mt-4 bg-blue-500 text-white w-full text-center px-4 py-2 rounded block">Leia mais</a>
+        </div>
+        <div class="bg-transparent border border-gray-400 rounded-lg shadow-lg overflow-hidden w-[px] h-[600px] transition-transform 
+        transform hover:scale-105 mt-20 mx-auto p-4">
+          <img src="img/noticia3.jpg" alt="Notícia 3" class="w-full h-48 object-cover mb-4">
+          <h3 class="text-4xl font-bold mb-2 text-white ">Promotores dos EUA acusam dois irmãos por recorde de 35.000 ataques DDoS</h3><br>
+          <p class="text-3xl text-white mb-4">Promotores federais nos EUA acusaram dois irmãos sudaneses de operar uma botnet de negação de serviço distribuída (DDoS) de aluguel,…</p>
+        <br> <br> <a href="Links da pagina inicial/D3.html" class="mt-4 bg-blue-500 text-white w-full text-center px-4 py-2 rounded block">Leia mais</a>
+        </div>
+      </div><br><br><br><br><br><br><br><br>
+    </section>
+    
 
-      <section id="testimonials" class="bg-gray-100 p-8 mt-8">
-        <h2 class="text-3xl font-bold text-center mb-8">O que as pessoas estão dizendo</h2>
-        <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section id="testimonials" class="bg-gray-800 py-16 mt-16">
+        <h2 class="text-5xl md:text-7xl font-bold text-center mb-16 text-white">O que as pessoas estão dizendo</h2>
+       <br> <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
           <!-- Depoimento 1 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <p class="text-lg italic mb-4">"O site é incrível! Muito fácil de navegar e encontrar as informações que eu preciso."</p>
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <p class="text-xl italic mb-6">"O site é incrível! Muito fácil de navegar e encontrar as informações que eu preciso."</p>
             <div class="flex items-center">
-              <img src="img/usuario1.jpg" alt="Usuário 1" class="w-12 h-12 rounded-full mr-4">
+              <img src="img/usuario1.jpg" alt="Usuário 1" class="w-16 h-16 rounded-full mr-6">
               <div>
-                <p class="font-bold">João Silva</p>
+                <p class="font-bold text-lg">João Silva</p>
                 <p class="text-sm text-gray-600">Empresário</p>
               </div>
             </div>
           </div>
           <!-- Depoimento 2 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <p class="text-lg italic mb-4">"Conteúdo excelente e sempre atualizado. Recomendo a todos os meus amigos!"</p>
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <p class="text-xl italic mb-6">"Conteúdo excelente e sempre atualizado. Recomendo a todos os meus amigos!"</p>
             <div class="flex items-center">
-              <img src="img/usuario2.jpg" alt="Usuário 2" class="w-12 h-12 rounded-full mr-4">
+              <img src="img/usuario2.jpg" alt="Usuário 2" class="w-16 h-16 rounded-full mr-6">
               <div>
-                <p class="font-bold">Maria Souza</p>
+                <p class="font-bold text-lg">Maria Souza</p>
                 <p class="text-sm text-gray-600">Designer</p>
               </div>
             </div>
           </div>
           <!-- Depoimento 3 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <p class="text-lg italic mb-4">"A interface é intuitiva e bonita. A experiência de usuário é fantástica!"</p>
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <p class="text-xl italic mb-6">"A interface é intuitiva e bonita. A experiência de usuário é fantástica!"</p>
             <div class="flex items-center">
-              <img src="img/usuario3.jpg" alt="Usuário 3" class="w-12 h-12 rounded-full mr-4">
+              <img src="img/usuario3.jpg" alt="Usuário 3" class="w-16 h-16 rounded-full mr-6">
               <div>
-                <p class="font-bold">Lucas Pereira</p>
+                <p class="font-bold text-lg">Lucas Pereira</p>
                 <p class="text-sm text-gray-600">Desenvolvedor</p>
               </div>
             </div>
           </div>
           <!-- Depoimento 4 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <p class="text-lg italic mb-4">"Excelente serviço e suporte. Sempre que preciso de algo, consigo resolver rápido."</p>
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+            <p class="text-xl italic mb-6">"Excelente serviço e suporte. Sempre que preciso de algo, consigo resolver rápido."</p>
             <div class="flex items-center">
-              <img src="img/usuario4.jpg" alt="Usuário 4" class="w-12 h-12 rounded-full mr-4">
+              <img src="img/usuario4.jpg" alt="Usuário 4" class="w-16 h-16 rounded-full mr-6">
               <div>
-                <p class="font-bold">Ana Costa</p>
+                <p class="font-bold text-lg">Ana Costa</p>
                 <p class="text-sm text-gray-600">Empreendedora</p>
               </div>
             </div>
-          </div>
-        </div>
+          </div><br><br>
+        
       </section>
+      
       
 
       <!-- O footer será carregado aqui -->
   <div id="footer"></div>
 
   <script>
-    fetch('footer/footer.html')  // Caminho para a pasta onde o footer está
+    fetch('footer/footer2.html')  // Caminho para a pasta onde o footer está
       .then(response => {
         if (!response.ok) {
           throw new Error('Erro ao carregar o footer');
